@@ -2,90 +2,73 @@
 
 namespace KillTheMonster
 {
+    // class definition
     public class Player
     {
-        public double chance;
-        public int[] bulletPos;
-        public double reset;
-        public double totalScore;
-        public double totalWins;
-        public double totalLoses;
-        Random rnd = new Random();
+        // private and internal access specifier for member variables
+        // for having limited access to only current containing type Class
+        //  & current assembly Classes
+        private int bulletPosition;
+        private int spinValue;
+        internal int totalScore;
+        internal int totalWins;
+        internal int totalLoses;
+        internal int chance;
 
+
+        // constructor for initializing default values
         public Player()
         {
+            bulletPosition = -1;
+            spinValue = -2;
             chance = 2;
-            bulletPos = new int[6];
-            reset = 0;
             totalScore = 0;
             totalWins = 0;
             totalLoses = 0;
-            
         }
 
-        public String loadBullets(int pos)
+        // Re-initializes chance with 2 for game reset events.
+        // Assigns random number between 0-5 to bulletPosition.
+        // Param - random, integer number from 0-5.
+        // Return - Boolean, true if number is between 0 or 5; else false.
+        public Boolean LoadBullets(int random)
         {
-            bulletPos[pos] = 1;
-            return "Bullet Loaded Successfully...";
+            chance = 2;
+            if (random < 0 || random > 5)
+                return false;
+            bulletPosition = random;
+            return true;
         }
 
-        public void spinChambers()
+        // Assigns random number between 0-5 to spinValue.
+        // Param - random, integer number from 0-5.
+        // Return - Boolean, true if number is between 0 or 5; else false.
+        public Boolean SpinChambers(int random)
         {
-            for (int i = 0; i < bulletPos.Length; i++)
+            if (random < 0 || random > 5)
+                return false;
+            spinValue = random;
+            return true;
+        }
+        // Checks the spinValue and bulletPosition values.
+        // If found equal, increments win points by 1,
+        // total score by 10, assigns specific check value -3 to chance.
+        // Else decrement chance by 1, and if no chance left(0)
+        // increments lose points by 1.
+        public void Fire()
+        {
+            if (spinValue == bulletPosition)
             {
-                Console.WriteLine("\n bulletPos[" + i + "] = " + bulletPos[i]);
-                if (bulletPos[i] == 1)
-                {
-                    bulletPos[i] = 0;
-                }
-            }
-            
-            int l = rnd.Next(0, 6);
-            bulletPos[l] = 1;
-            Console.WriteLine("\n Spinned Bullet[" + l + "] = " + bulletPos[l]);
-            // swap the bullet position from above random integer from 1 - 6.
-        }
-
-        //@returnParam - 	Case 1) You missed him.... _ more chance left..
-
-        //      Case 2) Whoa!!... You killed the monster...
-
-        //    Case 3) You are dead... Click playAgain or load bullet..
-        public String fire()
-        {
-            //Random rnd2 = new Random();
-            int l = rnd.Next(0, 6);
-            Console.WriteLine("\n Fired bullet[" + l + "] = " + bulletPos[l]);
-            if (bulletPos[l] == 1)
-            {
-                chance = 2;
                 totalWins++;
                 totalScore += 10;
-                return "Whoa!!... You killed the monster...";
-            }else
+                chance = -3;
+            }
+            else
             {
                 chance--;
-                if (chance != 0)
-                    return "You missed him...." + chance + " more chance left..";
-                else
-                {
+                if (chance == 0)
                     totalLoses++;
-                    totalScore -= 10;
-                    return "You are dead... Click PlayAgain and Load Bullet..";
-                }      
             }
-        }
-        //@returnParam - 	Game is reset now...Ready to kill the monster? Click Load bullets
-        public String playAgain()
-        {
-            return "";
-
-        }
-
-        //@returnParam - Revolver is empty now, please load the bullet and try again.
-        public void resetRevolver()
-        {
-
         }
     }
 }

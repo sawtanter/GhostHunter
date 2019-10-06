@@ -12,6 +12,7 @@
             if (disposing && (components != null))
             {
                 components.Dispose();
+                soundPlayer.Dispose();
             }
             base.Dispose(disposing);
         }

@@ -12,15 +12,15 @@ namespace KillTheMonster.Tests
     public class PlayerTests
     {
         [TestMethod()]
-        public void FireTest()
+        public void Test()
         {
-            //Arrange
             Player player = new Player();
-            Boolean lb = player.LoadBullets(6);
-            Boolean sc = player.SpinChambers(-1);
-            Assert.IsTrue(lb == true,"Random number not between 0 - 5");
-            Assert.IsTrue(sc == true, "Random number not between 0 - 5");
-            Assert.Fail();
+
+            Boolean loadBullet = player.LoadBullets(6);
+            Boolean SpinChamber = player.SpinChambers(-1);
+            player.Fire();
+            Assert.IsTrue(loadBullet == false, "Random number not between 0 - 5");
+            Assert.IsTrue(SpinChamber == false, "Random number not between 0 - 5");
         }
     }
 }

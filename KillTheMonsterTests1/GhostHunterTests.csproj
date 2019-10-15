@@ -6,8 +6,8 @@
     <ProjectGuid>{88C01332-5EB3-4A98-B89B-5F760DE9C610}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KillTheMonsterTests1</RootNamespace>
-    <AssemblyName>KillTheMonsterTests1</AssemblyName>
+    <RootNamespace>GhostHunterTests</RootNamespace>
+    <AssemblyName>GhostHunterTests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -55,9 +56,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KillTheMonster\KillTheMonster.csproj">
+    <ProjectReference Include="..\KillTheMonster\GhostHunter.csproj">
       <Project>{4085644B-D8F0-491F-B28F-C9223088010D}</Project>
-      <Name>KillTheMonster</Name>
+      <Name>GhostHunter</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

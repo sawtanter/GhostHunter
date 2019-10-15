@@ -1,16 +1,17 @@
 ﻿using System.Reflection;
 using System.Resources;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: NeutralResourcesLanguage("en-US")]
-[assembly: AssemblyTitle("GhostHunter")]
+[assembly: NeutralResourcesLanguageAttribute("en-US")]
+[assembly: AssemblyTitle("KillTheMonster")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("GhostHunter")]
+[assembly: AssemblyProduct("KillTheMonster")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GhostHunter
+namespace KillTheMonster
 {
     // class definition
     public class Player

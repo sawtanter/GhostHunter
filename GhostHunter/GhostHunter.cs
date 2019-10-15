@@ -47,7 +47,7 @@ namespace GhostHunter
             fire.Enabled = true;
             if (player.LoadBullets(random.Next(0, 6)) == false)         // Next function takes min and max(exclusive)
             {                                                           // values to generated randome numbers.
-                message.Text = "Error Loading Bullets.. Try again!!";   // Message to be displayed if any error
+                message.Text = "Error Loading Bullet.. Try again!!";   // Message to be displayed if any error
                 loadBullet.Enabled = true;                              // occurs while assigning random number.
             }
             else
@@ -64,7 +64,7 @@ namespace GhostHunter
         private void SpinChambers_Click(object sender, EventArgs e)
         {
             if (player.SpinChambers(random.Next(0, 6)) == false)                  // Message to be displayed if any error
-                message.Text = "OOps Spinning the chamber failed.. Try again!!";  // occurs while assigning random number
+                message.Text = "Oops Spinning the chamber failed.. Try again!!";  // occurs while assigning random number
             else
             {
                 soundPlayer.SoundLocation = @"Resource\SpinChambers.wav";
@@ -74,7 +74,7 @@ namespace GhostHunter
         }
 
         // This function cross-checks the spin value and bullet position.
-        // If both are equal then the monster will be killed.
+        // If both are equal then the ghost will be killed.
         // Else the player loses a chance or be dead if no chances are left.
         // Calculation of total win/lose points and total score for overall game session.
         private void Fire_Click(object sender, EventArgs e)
@@ -82,11 +82,11 @@ namespace GhostHunter
             player.Fire();
             if (player.chance == -3)                                        // Specific chance value -3 to be 
             {                                                               // checked for win case
-                soundPlayer.SoundLocation = @"Resource\GunBulletFire.wav";
+                soundPlayer.SoundLocation = @"Resource\Win.wav";
                 soundPlayer.Play();                                         // Plays gun bullet fire sound.
                 win.Text = player.totalWins + "";                           // Sets win points on the win label.
-                pictureBox1.Image = Image.FromFile(@"Resource\KilledMonster.jpg");
-                message.Text = "Great!!... You killed the monster...Wanna Play Again?";
+                pictureBox1.Image = Image.FromFile(@"Resource\GhostDead.jpg");
+                message.Text = "Yipiee!! You killed the Ghost. Want to Play Again?";
                 loadBullet.Enabled = false;
                 spinChambers.Enabled = false;
                 fire.Enabled = false;
@@ -98,12 +98,12 @@ namespace GhostHunter
                 loadBullet.Enabled = false;
                 spinChambers.Enabled = false;
                 fire.Enabled = false;
-                soundPlayer.SoundLocation = @"Resource\mario_death.wav";
+                soundPlayer.SoundLocation = @"Resource\YouAreDead.wav";
                 soundPlayer.Play();
             }
             else                                                          // Remaining chance case where number of chance
             {                                                             // is still left for the player.
-                soundPlayer.SoundLocation = @"Resource\GunBulletFire.wav";
+                soundPlayer.SoundLocation = @"Resource\GunFire.wav";
                 soundPlayer.Play();
                 message.Text = "You missed ..." + player.chance + " more chance left.."; // Displays number of chance left.
             }
@@ -112,12 +112,12 @@ namespace GhostHunter
 
         // This function resets the form components such as
         // enabling only Load Bullet button and disabling the rest.
-        // Resets the welcome message and Monster image on 
+        // Resets the welcome message and ghost image on 
         // picture box.
         private void PlayAgain_Click(object sender, EventArgs e)
         {
-            message.Text = "Welcome to the Game!!";
-            pictureBox1.Image = Image.FromFile(@"Resource\Monster.jpg");
+            message.Text = "Welcome to Ghost Hunter!!";
+            pictureBox1.Image = Image.FromFile(@"Resource\GhostWelcome.jpg");
             loadBullet.Enabled = true;
             spinChambers.Enabled = false;
             playAgain.Enabled = false;

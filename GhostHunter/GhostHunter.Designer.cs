@@ -51,7 +51,7 @@
             this.loadBullet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.loadBullet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loadBullet.Location = new System.Drawing.Point(46, 16);
-            this.loadBullet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loadBullet.Margin = new System.Windows.Forms.Padding(2);
             this.loadBullet.Name = "loadBullet";
             this.loadBullet.Size = new System.Drawing.Size(142, 45);
             this.loadBullet.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.fire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.fire.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fire.Location = new System.Drawing.Point(270, 479);
-            this.fire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fire.Margin = new System.Windows.Forms.Padding(2);
             this.fire.Name = "fire";
             this.fire.Size = new System.Drawing.Size(233, 46);
             this.fire.TabIndex = 3;
@@ -77,7 +77,7 @@
             this.spinChambers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.spinChambers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.spinChambers.Location = new System.Drawing.Point(46, 83);
-            this.spinChambers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.spinChambers.Margin = new System.Windows.Forms.Padding(2);
             this.spinChambers.Name = "spinChambers";
             this.spinChambers.Size = new System.Drawing.Size(142, 45);
             this.spinChambers.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.playAgain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.playAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playAgain.Location = new System.Drawing.Point(46, 152);
-            this.playAgain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.playAgain.Margin = new System.Windows.Forms.Padding(2);
             this.playAgain.Name = "playAgain";
             this.playAgain.Size = new System.Drawing.Size(142, 39);
             this.playAgain.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(22, 25);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(442, 395);
             this.panel1.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(15, 11);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(417, 369);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -124,9 +124,9 @@
             this.message.Location = new System.Drawing.Point(52, 435);
             this.message.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.message.Name = "message";
-            this.message.Size = new System.Drawing.Size(649, 42);
+            this.message.Size = new System.Drawing.Size(649, 33);
             this.message.TabIndex = 1;
-            this.message.Text = "Welcome to the Game!!";
+            this.message.Text = "Welcome to Ghost Hunter!!";
             this.message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -135,7 +135,7 @@
             this.panel2.Controls.Add(this.loadBullet);
             this.panel2.Controls.Add(this.spinChambers);
             this.panel2.Location = new System.Drawing.Point(503, 34);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 212);
             this.panel2.TabIndex = 7;
@@ -150,7 +150,7 @@
             this.panel3.Controls.Add(this.totalScore);
             this.panel3.Controls.Add(this.winLose);
             this.panel3.Location = new System.Drawing.Point(503, 271);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(223, 149);
             this.panel3.TabIndex = 8;
@@ -233,7 +233,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(760, 536);
+            this.ClientSize = new System.Drawing.Size(764, 536);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.message);
